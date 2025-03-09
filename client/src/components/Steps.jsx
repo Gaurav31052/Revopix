@@ -10,7 +10,7 @@ const Steps = () => {
       viewport={{ once: true }}
      className='flex flex-col justify-center items-center text-center my-32'>
      
-        <h1 className='text-3xl sm:text-4xl font-semibold mb-2'>How it works</h1>
+        <h1 className='text-3xl sm:text-4xl font-semibold mb-2 font'>How it works</h1>
         <p className='text-lg text-neutral-600 mb-8'>Transform Words Into Stunning Images</p>
       
 

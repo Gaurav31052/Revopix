@@ -3,12 +3,14 @@ import Header from '../components/Header'
 import Steps from '../components/Steps'
 import GenerateBtn from '../components/GenerateBtn'
 import SplashCursor from '../components/SplashCursor'
+import Example from '../components/Example'
 const Home = () => {
   return (
     <div>
       <SplashCursor/>
       <Header/>
       <Steps/>
+      <Example/>
       <GenerateBtn/>
     </div>
   )

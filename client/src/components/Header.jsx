@@ -33,11 +33,11 @@ const Header = () => {
         <img src={assets.star_icon} alt='' />
       </motion.div>
 
-      <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center'
+      <motion.h1 className='text-6xl max-w-[300px] sm:text-8xl sm:max-w-[790px] mx-auto mt-10 text-center font'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 2 }}
-      >Turn text to <span className='text-purple-900'
+      >Turn text to <span className='text-purple-900 font'
 
       >image</span>, in seconds</motion.h1>
 
