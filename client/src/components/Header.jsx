@@ -37,7 +37,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 2 }}
-      >Turn text to <span className='text-purple-900 font'
+      >Turn text to <span className='text-gray-700 font'
 
       >image</span>, in seconds</motion.h1>
 
