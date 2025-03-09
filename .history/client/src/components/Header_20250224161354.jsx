@@ -1,0 +1,15 @@
+import React from 'react'
+import { assets } from '../assets/assets'
+
+const Header = () => {
+  return (
+    <div>
+      <div>
+      <p>Best text to image generator</p>
+      <img src={assets}
+      </div>
+    </div>
+  )
+}
+
+export default Header

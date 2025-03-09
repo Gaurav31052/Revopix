@@ -1,0 +1,14 @@
+import React from 'react'
+import { assets } from '../assets/assets'
+
+const GenerateBtn = () => {
+  return (
+    <div className='flex flex-col justify-center items-center mb-16'>
+      <h1 className='text-2xl md:text-3xl lg:4xl mt-4 text-neutral-800 py-6 md:py-16 font-semibold'>See the magic. Try now</h1>
+      <button className='inline-flex items-center  sm:text-lg text-white bg-black w-auto px-12 py-3 gap-2 rounded-full m-auto  '>Generate Images
+            <img className=' h-6' src={assets.star_group} alt=''/></button>
+    </div>
+  )
+}
+
+export default GenerateBtn
