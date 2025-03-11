@@ -40,7 +40,7 @@ const registerUser = async(req, res)=>{
         await newUser.save();
 
         // Send verification email
-        const verificationLink = `http://localhost:4000/api/user/verify/${verificationToken}`;
+        const verificationLink = `https://revopix-backend.onrender.com/api/user/verify/${verificationToken}`;
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: email,
