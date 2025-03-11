@@ -22,7 +22,8 @@ const navigate = useNavigate();
 
           <p className=' text-gray-600 max-sm:hidden pl-4'>Hi, {user.name}</p>
           <div className='relative group'>
-            <img src={assets.profile_icon} alt='' className='w-10 drop-shadow'/>
+            {/* <img src={assets.profile_icon} alt='' className='w-10 drop-shadow'/> */}
+            <div className=' w-12 h-12 border-white bg-white/50 rounded-full flex justify-center items-center font-extrabold text-4xl text-gray-800  '>{user.name.charAt(0).toUpperCase()}</div>
             <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12 '>
               <ul className='list-none m-0 p-2 rounded-md bg-white border text-sm '>
                 <li onClick={logout} className='py-1 px-2 cursor-pointer pr-10 '>Logout</li>
