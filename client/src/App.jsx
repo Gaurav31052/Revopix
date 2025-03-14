@@ -9,6 +9,10 @@ import Login from './components/Login'
 import { AppContext } from './context/AppContext'
 
 import { ToastContainer } from 'react-toastify';
+import Disclaimer from './pages/Disclaimer'
+import TermAndCondition from './pages/TermAndCondition'
+import Privacy from './pages/Privacy'
+import RefundAndCancellation from './pages/RefundAndCancellation'
 
 
 const App = () => {
@@ -25,6 +29,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
         <Route path="/buy" element={<BuyCredit />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/term-and-condition" element={<TermAndCondition />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/refund-policy" element={<RefundAndCancellation />} />
       </Routes>
       <Footer/>
     </div>
