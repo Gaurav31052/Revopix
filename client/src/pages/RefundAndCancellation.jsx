@@ -6,7 +6,7 @@ const RefundAndCancellation = () => {
     <div className='flex-col '>
    <div className='flex-col text-center'><h1 className=' text-4xl font-bold m-5'>Refund And Cancellation Policy</h1></div>
      
-     <div className=' w-3xl flex-col justify-center items-center text-lg border-dashed border-2 p-2'>
+     <div className=' w-3xl flex-col justify-center items-center text-lg border-dashed border-2 p-3'>
      <p>Refund Policy</p>
 <p>Effective Date: 14th March 2025</p>
 <p>Last Updated: 14th March 2025</p>
