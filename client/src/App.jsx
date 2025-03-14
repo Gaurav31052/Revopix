@@ -13,6 +13,7 @@ import Disclaimer from './pages/Disclaimer'
 import TermAndCondition from './pages/TermAndCondition'
 import Privacy from './pages/Privacy'
 import RefundAndCancellation from './pages/RefundAndCancellation'
+import ContactUs from './pages/ContactUs'
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/term-and-condition" element={<TermAndCondition />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/refund-policy" element={<RefundAndCancellation />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer/>
     </div>
