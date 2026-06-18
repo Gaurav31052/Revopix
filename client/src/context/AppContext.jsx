@@ -52,7 +52,30 @@ const AppContextProvider = (props)=>{
         }
     }
 
+    const removeBackground = async(file)=>{
+        try {
+            const formData = new FormData()
+            formData.append('image', file)
 
+            const {data} = await axios.post(backendUrl + '/api/image/remove-background', formData, {
+                headers: { token }
+            })
+
+            if(data.success){
+                loadCreditsData()
+                return data.resultImage
+            }
+            else{
+                toast.error(data.message)
+                loadCreditsData()
+                if(data.creditBalance === 0){
+                    navigate('/buy')
+                }
+            }
+        } catch (error) {
+            toast.error(error.response?.data?.message || error.message)
+        }
+    }
 
     const logout = ()=>{
         localStorage.removeItem('token')
@@ -67,7 +90,7 @@ const AppContextProvider = (props)=>{
         }
     }, [token])
     const value={
-        user,setUser, showLogin, setShowLogin, backendUrl, token, setToken, credit, setCredit, loadCreditsData, logout, generateImage
+        user,setUser, showLogin, setShowLogin, backendUrl, token, setToken, credit, setCredit, loadCreditsData, logout, generateImage, removeBackground
     }
     return (
         <AppContext.Provider value={value}>{props.children}</AppContext.Provider>

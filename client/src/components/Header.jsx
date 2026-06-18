@@ -8,14 +8,13 @@ const Header = () => {
   const {user, setShowLogin} = useContext(AppContext);
   const navigate = useNavigate();
 
-  const onClickHandler = () => {
+  const onClickHandler = (path) => {
     if(user) {
-      navigate('/result')
+      navigate(path)
     }
     else {
       setShowLogin(true)
     }
-
   }
   return (
     <motion.div className='flex flex-col justify-center items-center text-center my-20'
@@ -47,13 +46,20 @@ const Header = () => {
         transition={{ delay: 0.6, duration: 0.8 }}
       >Unleash your creativity with AI. Turn your imagination into visual art in seconds - just type , and watch the magic happen.</motion.p>
 
-      <motion.button onClick={onClickHandler} className='sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full '
-      
+      <motion.div
+        className='flex flex-wrap justify-center gap-4 mt-8'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ default: { duration: 0.8 }, opacity: { delay: 0.8, duration: 1 } }}
-      >Generate Images
-        <img className=' h-6' src={assets.star_group} alt='' /></motion.button>
+      >
+        <button onClick={() => onClickHandler('/result')} className='sm:text-lg text-white bg-black w-auto px-12 py-2.5 flex items-center gap-2 rounded-full hover:scale-105 transition-all duration-300'>
+          Generate Images
+          <img className='h-6' src={assets.star_group} alt='' />
+        </button>
+        <button onClick={() => onClickHandler('/remove-background')} className='sm:text-lg text-white bg-black w-auto px-12 py-2.5 rounded-full hover:scale-105 transition-all duration-300'>
+          Remove Background
+        </button>
+      </motion.div>
 
 
 

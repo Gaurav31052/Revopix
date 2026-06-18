@@ -14,6 +14,7 @@ import TermAndCondition from './pages/TermAndCondition'
 import Privacy from './pages/Privacy'
 import RefundAndCancellation from './pages/RefundAndCancellation'
 import ContactUs from './pages/ContactUs'
+import RemoveBackground from './pages/RemoveBackground'
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/remove-background" element={<RemoveBackground />} />
         <Route path="/buy" element={<BuyCredit />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/term-and-condition" element={<TermAndCondition />} />
