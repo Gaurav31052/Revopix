@@ -11,7 +11,7 @@ const Steps = () => {
      className='flex flex-col justify-center items-center text-center my-32'>
      
         <h1 className='text-3xl sm:text-4xl font-semibold mb-2 font'>How it works</h1>
-        <p className='text-lg text-neutral-600 mb-8'>Transform Words Into Stunning Images</p>
+        <p className='text-lg text-neutral-600 mb-8'>Generate images from text and remove photo backgrounds in a few clicks</p>
       
 
     <div className=' space-y-4 w-full max-w-3xl text-sm'>

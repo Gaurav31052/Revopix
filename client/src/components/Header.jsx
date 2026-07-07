@@ -36,15 +36,31 @@ const Header = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 2 }}
-      >Turn text to <span className='text-gray-700 font'
+      >Create images & <span className='text-gray-700 font'
 
-      >image</span>, in seconds</motion.h1>
+      >remove backgrounds</span>, in seconds</motion.h1>
 
       <motion.p className='text-center max-w-xl mx-auto mt-5'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-      >Unleash your creativity with AI. Turn your imagination into visual art in seconds - just type , and watch the magic happen.</motion.p>
+      >Unleash your creativity with AI. Generate original images from your prompts, or upload a photo and remove its background for a clean, ready-to-use cutout.</motion.p>
+
+      <motion.div
+        className='grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mt-8 text-left'
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7, duration: 0.8 }}
+      >
+        <div className='bg-white/70 border border-white/80 rounded-2xl p-5 shadow-xl backdrop-blur-md'>
+          <h2 className='text-lg font-semibold text-neutral-800 mb-2'>Text to Image</h2>
+          <p className='text-sm text-neutral-600'>Describe any idea, style, scene, or product concept and RevoPix turns it into a high-quality AI image in seconds.</p>
+        </div>
+        <div className='bg-white/70 border border-white/80 rounded-2xl p-5 shadow-xl backdrop-blur-md'>
+          <h2 className='text-lg font-semibold text-neutral-800 mb-2'>Remove Background</h2>
+          <p className='text-sm text-neutral-600'>Upload PNG, JPG, or WEBP images and create clean transparent-background cutouts for profiles, products, thumbnails, and designs.</p>
+        </div>
+      </motion.div>
 
       <motion.div
         className='flex flex-wrap justify-center gap-4 mt-8'
