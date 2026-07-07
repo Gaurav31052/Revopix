@@ -32,6 +32,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
 }
 
 body {
@@ -43,6 +44,23 @@ body {
         linear-gradient(135deg, #f8fbf6 0%, #e9f6ef 48%, #f7f7ef 100%);
     color: var(--ink);
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 body::before {
